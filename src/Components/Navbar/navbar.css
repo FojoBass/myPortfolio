@@ -1,0 +1,200 @@
+#navbar {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.logo {
+  text-transform: capitalize;
+  font-size: var(--lrg-fnt);
+  color: var(--txt-clr2);
+  font-family: var(--fnt1);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  background-color: #000000c9;
+  transition: all ease-out var(--slow-trans);
+  overflow: hidden;
+}
+
+.dropdown.show {
+  overflow: hidden;
+}
+
+.nav-links-wrapper {
+  padding: 15px;
+}
+
+.nav-link {
+  display: block;
+  padding: 10px 0;
+  text-transform: capitalize;
+  font-family: var(--fnt3);
+  border-bottom: 0.5px solid #dee3e41a;
+  transition: all ease var(--mid-trans);
+  color: #dee3e4;
+  letter-spacing: 0.1rem;
+}
+
+.nav-links-wrapper li:last-child .nav-link {
+  border: none;
+}
+
+.nav-link:hover {
+  color: var(--spc-clr);
+}
+
+.nav-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-link.active {
+  color: var(--spc-clr);
+}
+
+.menu-btn {
+  width: 25px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.menu-btn hr {
+  border: none;
+  width: 100%;
+  height: 2px;
+  background-color: var(--txt-clr2);
+  margin-bottom: 5px;
+  transition: all ease var(--mid-trans);
+  transform-origin: left;
+}
+
+.menu-open hr:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-open hr:first-child {
+  transform: rotate(35deg);
+}
+
+.menu-open hr:last-child {
+  transform: rotate(-35deg);
+}
+
+.menu-btn hr:last-child {
+  margin-bottom: 0;
+}
+
+.social-links-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-link {
+  margin-right: 20px;
+}
+
+.social-link a {
+  display: block;
+  color: #dee3e4;
+  font-size: var(--sml-fnt);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-link:last-child {
+  margin-right: 0;
+}
+
+.linkedIn:hover a {
+  color: #0077b5;
+}
+
+.github:hover a {
+  color: #171515;
+}
+
+.twitter:hover a {
+  color: #00acee;
+}
+
+#navbar.fixed {
+  position: fixed;
+  width: 100%;
+  top: -100%;
+  left: 0;
+  background-color: #111;
+  animation: stickyAnim 0.5s forwards;
+}
+
+@media screen and (max-width: 350px) {
+  .menu-btn {
+    margin-right: 15px;
+  }
+
+  .menu-btn hr {
+    width: 20px;
+    margin-bottom: 3px;
+  }
+
+  .social-link {
+    margin-right: 15px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .dropdown {
+    position: static;
+    height: auto !important;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .nav-links-wrapper {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-link {
+    padding: 0 20px;
+    border: none;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  .social-link {
+    margin-right: 25px;
+  }
+}
+
+@keyframes stickyAnim {
+  0% {
+    top: -100%;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}

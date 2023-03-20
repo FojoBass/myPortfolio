@@ -1,0 +1,18 @@
+#footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #000;
+}
+
+#footer p {
+  font-family: var(--fnt1);
+  font-size: var(--xsml-fnt);
+  letter-spacing: 0.1rem;
+  word-spacing: 0.2rem;
+  line-height: 25px;
+  color: #fff;
+}
+
+#footer a {
+  color: var(--spc-clr);
+}

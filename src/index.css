@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Playfair+Display&family=Roboto:wght@300;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --spc-clr: #20c997;
+  --txt-clr2: #ffffff;
+  --fnt1: 'Montserrat', sans-serif;
+  --fnt2: 'Playfair Display', serif;
+  --fnt3: 'Roboto', sans-serif;
+  --fast-trans: 0.2s;
+  --mid-trans: 0.3s;
+  --slow-trans: 0.5s;
+  --xsml-fnt: 1rem;
+  --sml-fnt: 1.2rem;
+  --smd-fnt: 1.4rem;
+  --mid-fnt: 1.6rem;
+  --mlrg-fnt: 1.8rem;
+  --lrg-fnt: 2rem;
+  --xlrg-fnt: 2.8rem;
+  scroll-behavior: smooth;
+  --ext-clr2: #dc3545;
+  --ext-clr-tnt: #ffe7e3;
+}
+
+.light-theme {
+  --hdg-clr1: #dee3e4;
+  --hdg-clr2: #212529;
+  --txt-clr1: #4c4d4d;
+  --ext-clr: #e9ecef;
+  --bg-clr1: #ffffff;
+  --bg-clr2: #f8f9fa;
+  --shd-clr: #d1d1d1;
+}
+
+.dark-theme {
+  --hdg-clr1: #6c757d;
+  --hdg-clr2: #ffffff;
+  --txt-clr1: #ffffff80;
+  --ext-clr: #111418;
+  --bg-clr1: #212529;
+  --bg-clr2: #343a40;
+  --shd-clr: #1f1f1f;
+}
+
+a {
+  text-decoration: none;
+  transition: all ease var(--mid-trans);
+}
+
+button {
+  outline: none;
+  background-color: none;
+  border: none;
+  transition: all ease var(--mid-trans);
+  background: none;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.8);
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.section-wrapper {
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.section-wrapper:not(#services .section-wrapper, #contact .section-wrapper) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-sect {
+  width: 100%;
+  margin: auto;
+  top: 50%;
+  left: 0;
+}
+
+.section {
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 0;
+  display: flex;
+}
+
+.section:nth-of-type(odd) {
+  background-color: var(--bg-clr2);
+}
+
+.section:nth-of-type(even) {
+  background-color: var(--bg-clr1);
+}
+
+.section-hdg {
+  text-align: center;
+  color: var(--hdg-clr2);
+  text-transform: capitalize;
+  font-size: 2.5rem;
+  font-family: var(--fnt2);
+  letter-spacing: 0.2rem;
+  padding: 30px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.section-hdg::before {
+  content: '';
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translate(-50%, -15%);
+  background-color: var(--spc-clr);
+  width: 80px;
+  height: 3px;
+}
+
+.section-hdg:after {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: arial;
+  font-size: 4.5rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: -1;
+  color: var(--hdg-clr1);
+}
+
+p {
+  font-family: var(--fnt3);
+}
+
+.img-wrapper {
+  position: relative;
+}
+
+.dark-theme .img-wrapper:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000056;
+}
+
+button,
+textarea,
+input,
+select,
+a,
+.menu-btn,
+#go-up,
+.settings h3,
+.settings span,
+.sett-logo {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* *For SingleProj and Portfolio(mobile view) */
+.selectors {
+  text-align: center;
+}
+
+.selector {
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  margin: 0 5px;
+  position: relative;
+  border: 1px solid transparent;
+}
+
+.selector:after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: var(--hdg-clr2);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all ease var(--mid-trans);
+}
+
+.selector.active {
+  border-color: var(--ext-clr2);
+}
+
+.selector.active:after {
+  background-color: var(--ext-clr2);
+}
+
+@media screen and (max-width: 350px) {
+  :root {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 350px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  :root {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .section-hdg:after {
+    font-size: 3rem;
+  }
+
+  .section-hdg {
+    font-size: var(--mid-fnt);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .section-hdg:after {
+    font-size: 5rem;
+    /* top: 70%;
+    transform: translateY(-70%); */
+  }
+
+  .section-hdg {
+    font-size: var(--lrg-fnt);
+  }
+
+  .section-hdg::before {
+    bottom: 10%;
+  }
+}

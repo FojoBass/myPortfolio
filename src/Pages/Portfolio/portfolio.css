@@ -1,0 +1,278 @@
+/* *.ntd means 'not touch device', .td means 'touch device' */
+
+#portfolio {
+  position: relative;
+}
+
+#portfolio .section-hdg::after {
+  content: 'portfolio';
+}
+
+.projects {
+  margin: 20px 0;
+  flex-basis: 100%;
+}
+
+/* *NTD */
+.ntd .project {
+  position: relative;
+  margin-bottom: 25px;
+  /* height: 400px; */
+  width: 100%;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.proj-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: var(--mid-fnt);
+  color: var(--txt-clr2);
+  font-family: var(--fnt3);
+  transform: translate(-50%, -50%);
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #000000a2;
+  opacity: 0;
+  transition: all ease var(--mid-trans);
+}
+
+.ntd .project:hover .proj-name {
+  opacity: 1;
+  color: #fff;
+}
+
+.ntd .project .img-wrapper {
+  width: 100%;
+}
+
+.ntd .project:hover img {
+  filter: blur(3px);
+}
+
+/* *END NTD */
+
+/* *TD */
+.td .project {
+  box-shadow: 0 0 8px 3px var(--shd-clr);
+  padding: 10px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  border-radius: 5px;
+  max-height: fit-content;
+}
+
+.td .project:last-of-type {
+  margin-bottom: 0;
+}
+
+.td .img-container {
+  border-radius: 5px 5px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.td .img-slider {
+  display: flex;
+  transition: all ease-out var(--mid-trans);
+  position: relative;
+}
+
+.dark-theme.td .img-slider::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000052;
+}
+
+.td .img-slider.active {
+  filter: blur(3px);
+  transform: scale(1.2);
+}
+
+.td .proj-name.active {
+  opacity: 1;
+}
+
+.td .img-container img {
+  transition: all ease var(--slow-trans);
+  transform-origin: center;
+}
+
+.td .img-container.active img {
+  filter: blur(3px);
+  transform: scale(1.2);
+}
+
+.td .selectors {
+  padding: 5px;
+}
+
+.td .proj-info {
+  line-height: 20px;
+  margin: 5px 0 10px;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  height: 0;
+  overflow-y: hidden;
+  transition: all ease-in var(--mid-trans);
+}
+
+.td .proj-info.show {
+  height: 100px;
+  overflow-y: scroll;
+}
+
+.proj-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.stack {
+  display: flex;
+}
+
+.stack div {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  align-items: center;
+}
+
+.stack div:last-of-type {
+  margin-right: 0;
+}
+
+.icon {
+  color: var(--txt-clr1);
+  font-size: var(--sml-fnt);
+}
+
+.title {
+  font-size: 0.6rem;
+  text-transform: capitalize;
+  color: var(--txt-clr1);
+  font-style: italic;
+}
+
+.date {
+  font-style: italic;
+  color: var(--txt-clr1);
+  font-size: 0.9rem;
+}
+
+.td .more-btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.td .more-btn,
+.view-btn {
+  text-transform: uppercase;
+  color: var(--txt-clr2);
+  padding: 3px 10px;
+  font-family: var(--fnt1);
+  border-radius: 5px;
+  letter-spacing: 0.1rem;
+  font-size: var(--xsml-fnt);
+  display: flex;
+}
+
+.td .more-btn {
+  background-color: var(--ext-clr2);
+
+  align-items: flex-end;
+}
+
+.td .more-btn span,
+.td .view-btn span {
+  margin-right: 3px;
+}
+
+.view-btn {
+  background-color: var(--spc-clr);
+  align-items: flex-start;
+}
+
+/* *END TD */
+
+@media screen and (min-width: 700px) {
+  .td .projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 40px;
+    align-items: baseline;
+  }
+
+  .td .proj-info {
+    font-size: 0.9rem;
+  }
+
+  .td .project {
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .td .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .td .proj-info {
+    font-size: 0.7rem;
+  }
+
+  .td .icon {
+    font-size: var(--xsml-fnt);
+  }
+
+  .td .date {
+    font-size: 0.8rem;
+  }
+
+  .td .more-btn {
+    color: var(--txt-clr2);
+    padding: 3px 10px;
+    letter-spacing: 0;
+    font-size: 0.8rem;
+  }
+
+  .td .view-btn {
+    background-color: var(--spc-clr);
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: var(--xsml-fnt);
+    text-transform: lowercase;
+    letter-spacing: 0.1rem;
+    color: var(--txt-clr2);
+    font-family: var(--fnt2);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+    grid-row-gap: 30px;
+  }
+
+  .ntd .project {
+    margin-bottom: 0;
+  }
+}

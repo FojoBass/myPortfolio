@@ -1,0 +1,72 @@
+.settings {
+  position: fixed;
+  right: 0;
+  top: 30%;
+  z-index: 10;
+  background-color: #ebebeb;
+  transform: translateX(100%);
+  transition: all ease-out var(--slow-trans);
+}
+
+.settings.show {
+  transform: translateX(0);
+}
+
+.sett-logo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -34px;
+  background-color: grey;
+  padding: 10px;
+  color: var(--txt-clr2);
+  font-size: var(--xsml-fnt);
+  border-radius: 10px 0 0 10px;
+  cursor: pointer;
+}
+
+.sett-opts {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.settings h3 {
+  color: rgb(49, 4, 4);
+  text-transform: uppercase;
+  text-align: center;
+  font-family: var(--fnt3);
+  padding: 10px;
+  font-size: var(--sml-fnt);
+}
+
+.sett-opt.active {
+  background-color: var(--spc-clr);
+  color: #fff;
+  pointer-events: none;
+}
+
+.sett-opt.active .sett-icon {
+  opacity: 1;
+}
+
+.sett-icon {
+  margin-right: 7px;
+  opacity: 0;
+  transition: all ease var(--fast-trans);
+}
+
+.sett-opt {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-family: var(--fnt1);
+  letter-spacing: 0.1rem;
+  transition: all ease var(--mid-trans);
+  cursor: pointer;
+}
+
+.sett-opt:hover {
+  background-color: #a8a8a8;
+  color: #fff;
+}

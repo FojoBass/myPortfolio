@@ -1,0 +1,45 @@
+#error {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: var(--bg-clr2) url('404.jpg') center/cover no-repeat;
+  z-index: 10;
+  align-items: center;
+  justify-content: center;
+}
+
+#error:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #00000083;
+  z-index: -1;
+}
+
+#error h3 {
+  text-transform: capitalize;
+  font-size: var(--mlrg-fnt);
+  font-family: var(--fnt3);
+  color: #ebebeb;
+  letter-spacing: 0.1rem;
+  margin-bottom: 5px;
+  font-style: italic;
+}
+
+#error p {
+  text-transform: capitalize;
+  color: var(--txt-clr2);
+  margin-top: 5px;
+  font-family: var(--fnt1);
+  font-size: var(--sml-fnt);
+  letter-spacing: 0.1rem;
+}
+
+#error .count {
+  color: var(--spc-clr);
+}

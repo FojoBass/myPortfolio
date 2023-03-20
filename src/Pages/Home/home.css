@@ -1,0 +1,186 @@
+#home {
+  width: 100%;
+  height: 100vh;
+  background: black url('port-hero.jpg') center/cover no-repeat fixed;
+  position: relative;
+  z-index: 1;
+}
+
+#home:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #1a2523;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.home-wrapper {
+  position: relative;
+  top: 40%;
+  transform: translateY(-40%);
+  text-align: center;
+  position: relative;
+  padding: 0 10px;
+}
+
+.home-wrapper h3,
+.home-wrapper h1 {
+  margin-bottom: 20px;
+  font-family: var(--fnt3);
+  letter-spacing: 0.2rem;
+  opacity: 0;
+}
+
+.home-wrapper h3 {
+  color: #dee3e4;
+  font-size: var(--mlrg-fnt);
+  animation: opacityAnim 2s ease-out forwards;
+}
+
+.home-wrapper h3:first-of-type {
+  animation-delay: 1s;
+}
+
+.home-wrapper h3:last-of-type {
+  animation-delay: 5s;
+}
+
+.home-wrapper h1 {
+  color: var(--txt-clr2);
+  font-size: var(--xlrg-fnt);
+  animation: opacityAnim 2s 2s ease-out forwards;
+}
+
+.name {
+  position: relative;
+}
+
+.name::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #dee3e4;
+  border-radius: 5px;
+  animation: nameRevealAnim 0.5s ease-in-out forwards;
+}
+
+.name:first-of-type::after {
+  animation-delay: 3s;
+}
+
+.name:last-of-type::after {
+  animation-delay: 3.5s;
+}
+
+.hire-btn {
+  padding: 10px 50px;
+  color: var(--spc-clr);
+  font-size: var(--sml-fnt);
+  border: 2px solid var(--spc-clr);
+  border-radius: 10px;
+  text-transform: capitalize;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: -350%;
+  animation: hireBtnAnim 2s ease-out 5s forwards;
+}
+
+.hire-btn:hover {
+  color: var(--txt-clr2);
+  background-color: var(--spc-clr);
+}
+
+.goto-about {
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translateX(-50%);
+  font-size: var(--xlrg-fnt);
+  animation: upDownAnim 1.5s 6s ease-out infinite;
+  opacity: 0;
+}
+
+@media screen and (max-width: 400px) {
+  .home-wrapper h3 {
+    font-size: var(--smd-fnt);
+  }
+
+  .home-wrapper h1 {
+    font-size: 2.3rem;
+  }
+  .hire-btn {
+    font-size: 0.9rem;
+    padding: 7px 30px;
+  }
+}
+
+@keyframes opacityAnim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes nameRevealAnim {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes upDownAnim {
+  0% {
+    top: 85%;
+    color: #dee3e4;
+    opacity: 0;
+  }
+
+  50% {
+    color: #dee3e4;
+    opacity: 1;
+  }
+
+  100% {
+    top: 90%;
+    color: var(--txt-clr2);
+    opacity: 1;
+  }
+}
+
+@keyframes hireBtnAnim {
+  0% {
+    top: -350%;
+    opacity: 0;
+  }
+  50% {
+    top: 150%;
+    opacity: 1;
+  }
+
+  60% {
+    top: 110%;
+  }
+  70% {
+    top: 140%;
+  }
+  80% {
+    top: 120%;
+  }
+  100% {
+    top: 130%;
+  }
+}
