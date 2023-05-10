@@ -98,6 +98,7 @@ const Contact = () => {
                   cols='30'
                   rows='10'
                   name='msg'
+                  placeholder='Enter Message'
                 ></textarea>
 
                 <button

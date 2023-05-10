@@ -55,7 +55,7 @@ const About = () => {
                 </div>
 
                 <Link
-                  to='https://drive.google.com/file/d/1LvV_20NsaGcjveYF9uu4RxhAsmD_Fglr/view?usp=sharing'
+                  to='https://drive.google.com/file/d/1GjegamLIf35Vsrfzs84ECK0smL779TTJ/view?usp=sharing'
                   target='_blank'
                   className='resume-btn'
                 >
