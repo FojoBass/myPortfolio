@@ -89,12 +89,12 @@ const About = () => {
 
             <div className='stack_icon js'>
               <IoLogoJavascript />
-              <span className='stack_title'>JS</span>
+              <span className='stack_title'>JavaScript</span>
             </div>
 
             <div className='stack_icon ts'>
               <SiTypescript />
-              <span className='stack_title'>TS</span>
+              <span className='stack_title'>TypeScript</span>
             </div>
 
             <div className='stack_icon react'>
