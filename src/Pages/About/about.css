@@ -98,6 +98,88 @@
   box-shadow: 5px 3px 10px #000000;
 }
 
+.stack_sect {
+  margin-top: 20px;
+  max-width: 1000px;
+  margin: 30px auto 0;
+}
+
+.stack_sect h2 {
+  text-transform: capitalize;
+  font-family: var(--fnt2);
+  color: var(--hdg-clr2);
+  font-size: var(--mlrg-fnt);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.2rem;
+}
+
+.stack_sect h2 span {
+  width: 50px;
+  height: 2px;
+  background-color: var(--spc-clr);
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.stack_wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  margin-top: 30px;
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+}
+
+.stack_icon {
+  font-size: var(--xlrg-fnt);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background-color: blue; */
+}
+
+.stack_title {
+  font-size: var(--xsml-fnt);
+  color: var(--txt-clr1) !important;
+  margin-top: 10px;
+}
+
+.stack_icon.html {
+  color: #ff0000;
+}
+
+.stack_icon.css {
+  color: #ff0000;
+}
+
+.stack_icon.js {
+  color: #f0db4f;
+}
+
+.stack_icon.ts {
+  color: #2222ff;
+}
+
+.stack_icon.react {
+  color: #2222ff;
+}
+
+.stack_icon.redux {
+  color: #764abc;
+}
+
+.stack_icon.sass {
+  color: #c69;
+}
+
+.stack_icon.firebase {
+  color: #ffcb2b;
+}
+
 @media screen and (max-width: 400px) {
   #about h3 {
     font-size: var(--sml-fnt);

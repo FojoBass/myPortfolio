@@ -47,7 +47,6 @@ const App = () => {
     }
 
     if (sectionRef && !error) {
-      console.log(window.pageYOffset);
       if (window.pageYOffset < homeSectRef.current.bottom - navHeight - 120)
         setSectId(homeSectRef.current.id);
       else if (

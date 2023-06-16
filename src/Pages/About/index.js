@@ -2,6 +2,11 @@ import React from 'react';
 import './about.css';
 import { Link } from 'react-router-dom';
 import { useGlobalContext } from '../../context';
+import { AiFillHtml5 } from 'react-icons/ai';
+import { FaReact } from 'react-icons/fa';
+import { IoLogoCss3 } from 'react-icons/io';
+import { IoLogoFirebase, IoLogoJavascript } from 'react-icons/io5';
+import { SiTypescript, SiRedux, SiSass } from 'react-icons/si';
 
 const About = () => {
   const { sectionRef } = useGlobalContext();
@@ -65,6 +70,54 @@ const About = () => {
             </div>
           </div>
         </article>
+
+        <div className='stack_sect'>
+          <h2>
+            my stack <span></span>
+          </h2>
+
+          <div className='stack_wrapper'>
+            <div className='stack_icon html'>
+              <AiFillHtml5 />
+              <span className='stack_title'>HTML5</span>
+            </div>
+
+            <div className='stack_icon css'>
+              <IoLogoCss3 />
+              <span className='stack_title'>CSS3</span>
+            </div>
+
+            <div className='stack_icon js'>
+              <IoLogoJavascript />
+              <span className='stack_title'>JS</span>
+            </div>
+
+            <div className='stack_icon ts'>
+              <SiTypescript />
+              <span className='stack_title'>TS</span>
+            </div>
+
+            <div className='stack_icon react'>
+              <FaReact />
+              <span className='stack_title'>React</span>
+            </div>
+
+            <div className='stack_icon redux'>
+              <SiRedux />
+              <span className='stack_title'>Redux</span>
+            </div>
+
+            <div className='stack_icon sass'>
+              <SiSass />
+              <span className='stack_title'>SCSS</span>
+            </div>
+
+            <div className='stack_icon firebase'>
+              <IoLogoFirebase />
+              <span className='stack_title'>Firebase</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
