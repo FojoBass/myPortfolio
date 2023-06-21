@@ -14,7 +14,7 @@ const Index = () => {
     <>
       <Home />
       <About />
-      <Services />
+      {/* <Services /> */}
       <Portfolio />
       <Contact />
       {!isTouchDevice ? <SingleProj /> : ''}

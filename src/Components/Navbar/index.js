@@ -63,7 +63,7 @@ const Navbar = () => {
               about
             </AnchorLink>
           </li>
-          <li>
+          {/* <li>
             <AnchorLink
               offset={() => navHeight}
               className={`nav-link ${sectId === 'services' ? 'active' : ''}`}
@@ -72,7 +72,7 @@ const Navbar = () => {
             >
               what i do
             </AnchorLink>
-          </li>
+          </li> */}
           <li>
             <AnchorLink
               offset={() => navHeight}

@@ -1,3 +1,4 @@
+// TODO ADD NEW SECTION FOR EXPERIENCES, AND ENSURE TO HOOK IT UP WHERE IT IS SUPPOSED TO BE HOOKED
 import React, { useEffect, useRef } from 'react';
 import { Error } from './Pages';
 import { Footer, Navbar, Theme } from './Components';
@@ -17,7 +18,7 @@ const App = () => {
   } = useGlobalContext();
   const homeSectRef = useRef();
   const aboutSectRef = useRef();
-  const servSectRef = useRef();
+  // const servSectRef = useRef();
   const portSectRef = useRef();
   const conSectRef = useRef();
 
@@ -54,11 +55,11 @@ const App = () => {
         window.pageYOffset < aboutSectRef.current.bottom - navHeight - 120
       )
         setSectId(aboutSectRef.current.id);
-      else if (
-        window.pageYOffset >= servSectRef.current.top - navHeight - 120 &&
-        window.pageYOffset < servSectRef.current.bottom - navHeight - 120
-      )
-        setSectId(servSectRef.current.id);
+      // else if (
+      //   window.pageYOffset >= servSectRef.current.top - navHeight - 120 &&
+      //   window.pageYOffset < servSectRef.current.bottom - navHeight - 120
+      // )
+      //   setSectId(servSectRef.current.id);
       else if (
         window.pageYOffset >= portSectRef.current.top - navHeight - 120 &&
         window.pageYOffset < portSectRef.current.bottom - navHeight - 120
@@ -111,7 +112,7 @@ const App = () => {
 
       homeSectRef.current = new Sect(getSection(sections, 'home'));
       aboutSectRef.current = new Sect(getSection(sections, 'about'));
-      servSectRef.current = new Sect(getSection(sections, 'services'));
+      // servSectRef.current = new Sect(getSection(sections, 'services'));
       portSectRef.current = new Sect(getSection(sections, 'portfolio'));
       conSectRef.current = new Sect(getSection(sections, 'contact'));
     }
