@@ -30,9 +30,9 @@ const About = () => {
                   I am a Front-end developer knowledgeable in building websites
                   and web applications with good UI/UX. I am equipped and
                   proficient in technologies including HTML, CSS, Javascript,
-                  and React, and I have made use of these to build projects with
-                  high responsiveness and great UI/UX, sticking to modern
-                  conventions in frontend development
+                  Typescript, React, SCSS, and Firebase and I have made use of
+                  these to build projects with high responsiveness and great
+                  UI/UX, sticking to modern conventions in frontend development
                 </p>
 
                 <p>
