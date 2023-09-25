@@ -1,7 +1,8 @@
 import React, { createContext, useContext, useState, useRef } from 'react';
 import { AiFillHtml5 } from 'react-icons/ai';
-import { SiCss3, SiJavascript } from 'react-icons/si';
-import { FaReact } from 'react-icons/fa';
+import { SiCss3, SiJavascript, SiRedux, SiSass, SiTypescript } from 'react-icons/si';
+import { FaReact, FaSass } from 'react-icons/fa';
+import { IoLogoFirebase } from 'react-icons/io5';
 
 const AppContext = createContext();
 
@@ -19,6 +20,21 @@ export const AppContextProvider = ({ children }) => {
   const [error, setError] = useState('false');
 
   const projects = [
+    {
+      name: 'Adrift Journals',
+      stack: [
+        { title: 'React', icon: <FaReact /> },
+        { title: 'Redux', icon: <SiRedux /> },
+        { title: 'Typescript', icon: <SiTypescript /> },
+        { title: 'SCSS', icon: <SiSass /> },
+        { title: 'Firebase', icon: <IoLogoFirebase /> }
+      ],
+      info: 'Adrit Journals is an educational journal project, where users can upload journals for review and publishing. This project is responsive.',
+      imgUrls: ['/images/adrift_home.png', '/images/adrift_dash.png'],
+      id: 'a',
+      url: 'https://adriftjourn.netlify.app/',
+      date: 'September, 2023',
+    },
     {
       name: 'Comfy House',
       stack: [

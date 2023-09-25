@@ -136,19 +136,21 @@
 
 .proj-details {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   margin: 5px 0;
 }
 
 .stack {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
 }
 
 .stack div {
   display: flex;
   flex-direction: column;
-  margin-right: 10px;
+  /* margin-right: 10px; */
   align-items: center;
 }
 
