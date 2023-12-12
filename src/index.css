@@ -35,6 +35,7 @@
   --bg-clr1: #ffffff;
   --bg-clr2: #f8f9fa;
   --shd-clr: #d1d1d1;
+  --box-shd: #00000066;
 }
 
 .dark-theme {
@@ -45,6 +46,7 @@
   --bg-clr1: #212529;
   --bg-clr2: #343a40;
   --shd-clr: #1f1f1f;
+  --box-shd: #000000;
 }
 
 a {

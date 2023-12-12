@@ -39,7 +39,7 @@ const App = () => {
   };
 
   const windowScroll = () => {
-    if (navRef && !error) {
+    if (navRef.current && !error) {
       if (window.scrollY > 200) {
         navRef.current.className = 'fixed';
       } else {

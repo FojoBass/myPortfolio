@@ -92,7 +92,7 @@ textarea {
 }
 
 #contact button:hover {
-  box-shadow: 5px 3px 10px #000000;
+  box-shadow: 5px 3px 10px var(--box-shd);
 }
 
 .contact-info {

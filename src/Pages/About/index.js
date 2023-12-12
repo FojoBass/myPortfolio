@@ -51,7 +51,7 @@ const About = () => {
 
                 <div className='opts-wrapper'>
                   <span className='opt-title'>email: </span>{' '}
-                  <span className='opt email'>olubofosimubo@gmail.com</span>
+                  <span className='opt email'>fosimuboolubo@gmail.com</span>
                 </div>
 
                 <div className='opts-wrapper'>

@@ -145,7 +145,7 @@ const Contact = () => {
                   <span className='con-icon'>
                     <CiMail />
                   </span>
-                  <span className='con-info'>olubofosimubo@gmail.com</span>
+                  <span className='con-info'>fosimuboolubo@gmail.com</span>
                 </div>
               </div>
 
