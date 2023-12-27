@@ -2,7 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import './navbar.css';
 import { Link } from 'react-router-dom';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import { BsLinkedin, BsTwitter, BsGithub } from 'react-icons/bs';
+import { BsLinkedin, BsGithub } from 'react-icons/bs';
+import { FaXTwitter } from 'react-icons/fa6';
 import { useGlobalContext } from '../../context';
 
 const Navbar = () => {
@@ -121,8 +122,8 @@ const Navbar = () => {
             </Link>
           </li>
           <li className='social-link twitter'>
-            <Link to='https://twitter.com/FojoBass' target='_blank'>
-              {<BsTwitter />}
+            <Link to='https://twitter.com/devFojo' target='_blank'>
+              {<FaXTwitter />}
             </Link>
           </li>
         </ul>

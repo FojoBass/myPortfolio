@@ -3,7 +3,8 @@ import './contact.css';
 import { FiPhone } from 'react-icons/fi';
 import { FaWhatsapp, FaFacebookSquare } from 'react-icons/fa';
 import { CiMail } from 'react-icons/ci';
-import { BsLinkedin, BsTwitter, BsGithub } from 'react-icons/bs';
+import { BsLinkedin, BsGithub } from 'react-icons/bs';
+import { FaXTwitter } from 'react-icons/fa6';
 import emailjs from '@emailjs/browser';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { useGlobalContext } from '../../context';
@@ -160,8 +161,8 @@ const Contact = () => {
                   </span>
 
                   <span className='flink' id='tw'>
-                    <a href='https://twitter.com/FojoBass' target='_blank'>
-                      <BsTwitter />
+                    <a href='https://twitter.com/devFojo' target='_blank'>
+                      <FaXTwitter />
                     </a>
                   </span>
 

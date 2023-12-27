@@ -132,7 +132,7 @@
 }
 
 .twitter:hover a {
-  color: #00acee;
+  color: #171515;
 }
 
 #navbar.fixed {
@@ -140,8 +140,9 @@
   width: 100%;
   top: -100%;
   left: 0;
-  background-color: #111;
+  background-color: #11111173;
   animation: stickyAnim 0.5s forwards;
+  backdrop-filter: blur(10px);
 }
 
 @media screen and (max-width: 350px) {
