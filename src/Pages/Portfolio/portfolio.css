@@ -13,6 +13,10 @@
   flex-basis: 100%;
 }
 
+.project {
+  box-shadow: 0 0 10px 3px var(--box_shd2);
+}
+
 /* *NTD */
 .ntd .project {
   position: relative;
@@ -43,6 +47,7 @@
   background-color: #000000a2;
   opacity: 0;
   transition: all ease var(--mid-trans);
+  text-align: center;
 }
 
 .ntd .project:hover .proj-name {
@@ -270,8 +275,8 @@
   .projects {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 15px;
-    grid-row-gap: 30px;
+    grid-gap: 30px;
+    grid-row-gap: 35px;
   }
 
   .ntd .project {

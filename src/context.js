@@ -1,6 +1,12 @@
 import React, { createContext, useContext, useState, useRef } from 'react';
 import { AiFillHtml5 } from 'react-icons/ai';
-import { SiCss3, SiJavascript, SiRedux, SiSass, SiTypescript } from 'react-icons/si';
+import {
+  SiCss3,
+  SiJavascript,
+  SiRedux,
+  SiSass,
+  SiTypescript,
+} from 'react-icons/si';
 import { FaReact, FaSass } from 'react-icons/fa';
 import { IoLogoFirebase } from 'react-icons/io5';
 
@@ -21,17 +27,40 @@ export const AppContextProvider = ({ children }) => {
 
   const projects = [
     {
+      name: 'Social Publishing Platform',
+      stack: [
+        { title: 'React', icon: <FaReact /> },
+        { title: 'Redux', icon: <SiRedux /> },
+        { title: 'Typescript', icon: <SiTypescript /> },
+        { title: 'SCSS', icon: <SiSass /> },
+        { title: 'Firebase', icon: <IoLogoFirebase /> },
+      ],
+      info: 'Devie is a social publising platform project, where users can register on, and publish posts on various topics. \nIt has a rich text editor, making basic text formatting possible. It also has an infinite nested comment system. \nThis project is responsive.',
+      imgUrls: [
+        '/images/devie_home.png',
+        '/images/devie_dash.png',
+        '/images/devie_login.png',
+        '/images/devie_editor.png',
+        '/images/devie_coms.png',
+        '/images/devie_about.png',
+        '/images/devie_post.png',
+      ],
+      id: 'a',
+      url: 'https://devie.netlify.app/',
+      date: 'December, 2023',
+    },
+    {
       name: 'Adrift Journals',
       stack: [
         { title: 'React', icon: <FaReact /> },
         { title: 'Redux', icon: <SiRedux /> },
         { title: 'Typescript', icon: <SiTypescript /> },
         { title: 'SCSS', icon: <SiSass /> },
-        { title: 'Firebase', icon: <IoLogoFirebase /> }
+        { title: 'Firebase', icon: <IoLogoFirebase /> },
       ],
       info: 'Adrit Journals is an educational journal project, where users can upload journals for review and publishing. This project is responsive.',
       imgUrls: ['/images/adrift_home.png', '/images/adrift_dash.png'],
-      id: 'a',
+      id: 'b',
       url: 'https://adriftjourn.netlify.app/',
       date: 'September, 2023',
     },
