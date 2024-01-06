@@ -7,7 +7,7 @@ import {
   SiSass,
   SiTypescript,
 } from 'react-icons/si';
-import { FaReact, FaSass } from 'react-icons/fa';
+import { FaReact } from 'react-icons/fa';
 import { IoLogoFirebase } from 'react-icons/io5';
 
 const AppContext = createContext();
@@ -48,6 +48,19 @@ export const AppContextProvider = ({ children }) => {
       id: 'a',
       url: 'https://devie.netlify.app/',
       date: 'December, 2023',
+    },
+    {
+      name: 'MTN NG Home Page Clone',
+      stack: [
+        { title: 'React', icon: <FaReact /> },
+        { title: 'Typescript', icon: <SiTypescript /> },
+        { title: 'SCSS', icon: <SiSass /> },
+      ],
+      info: 'I cloned the home page of MTN NG (as at December 2023), with some modifications to the scroll bar, navbar dropdown, and addition of dark mode and intersection observer. \nIt is a also responsive.',
+      imgUrls: ['/images/mtn_proj1.jpg', '/images/mtn_proj2.png'],
+      id: 'ab',
+      url: 'https://mtnnghomemod.netlify.app/',
+      date: 'January, 2024',
     },
     {
       name: 'Adrift Journals',
