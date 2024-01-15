@@ -35,7 +35,7 @@ export const AppContextProvider = ({ children }) => {
         { title: 'SCSS', icon: <SiSass /> },
         { title: 'Firebase', icon: <IoLogoFirebase /> },
       ],
-      info: 'Devie is a social publising platform project, where users can register on, and publish posts on various topics. \nIt has a rich text editor, making basic text formatting possible. It also has an infinite nested comment system. \nThis project is responsive.',
+      info: 'Devie is a social publising platform project, where users can register on, and publish posts on various topics. \nIt has a rich text editor, which was built completely by me, making basic text formatting possible. It also has an infinite nested comment system. \nThis project is responsive.',
       imgUrls: [
         '/images/devie_home.png',
         '/images/devie_dash.png',
