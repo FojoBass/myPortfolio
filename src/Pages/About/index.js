@@ -7,6 +7,7 @@ import { FaReact } from 'react-icons/fa';
 import { IoLogoCss3 } from 'react-icons/io';
 import { IoLogoFirebase, IoLogoJavascript } from 'react-icons/io5';
 import { SiTypescript, SiRedux, SiSass } from 'react-icons/si';
+import { TbBrandNextjs } from 'react-icons/tb';
 
 const About = () => {
   const { sectionRef } = useGlobalContext();
@@ -105,6 +106,11 @@ const About = () => {
             <div className='stack_icon redux'>
               <SiRedux />
               <span className='stack_title'>Redux</span>
+            </div>
+
+            <div className='stack_icon next'>
+              <TbBrandNextjs />
+              <span className='stack_title'>Next.Js</span>
             </div>
 
             <div className='stack_icon sass'>

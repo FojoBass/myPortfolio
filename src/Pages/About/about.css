@@ -181,6 +181,10 @@
   color: #ffcb2b;
 }
 
+.stack_icon.next {
+  color: #000;
+}
+
 @media screen and (max-width: 400px) {
   #about h3 {
     font-size: var(--sml-fnt);

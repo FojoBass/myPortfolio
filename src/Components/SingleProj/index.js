@@ -10,6 +10,8 @@ const SingleProj = () => {
   const sliderRef = useRef(null);
   const [selCount, setSelCount] = useState(0);
 
+  console.log({ selCount });
+
   const handleClose = (e) => {
     if (e) {
       if (e === singleProjRef.current) {
@@ -29,7 +31,10 @@ const SingleProj = () => {
       } else document.documentElement.style.overflowY = 'scroll';
     }, 500);
 
-    return () => clearTimeout(refTimeout);
+    return () => {
+      clearTimeout(refTimeout);
+      setSelCount(0);
+    };
   }, [singleProjRef, modalOpen]);
 
   return (

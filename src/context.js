@@ -7,6 +7,7 @@ import {
   SiSass,
   SiTypescript,
 } from 'react-icons/si';
+import { TbBrandNextjs } from 'react-icons/tb';
 import { FaReact } from 'react-icons/fa';
 import { IoLogoFirebase } from 'react-icons/io5';
 
@@ -50,6 +51,37 @@ export const AppContextProvider = ({ children }) => {
       date: 'December, 2023',
     },
     {
+      name: '3D Portfolio',
+      stack: [
+        { title: 'Next.Js', icon: <TbBrandNextjs /> },
+        { title: 'SCSS', icon: <SiSass /> },
+      ],
+      info: 'This is a dummy 3D portfolio website in a book form. Naviagtion from one page to the other is also in the form of a book. \nThis projects utilizes the concept of 3D CSS. It is also responsive.',
+      imgUrls: ['/images/book1.png', '/images/book2.png', '/images/book3.png'],
+      id: 'a1g',
+      url: 'https://johnbook.netlify.app',
+      data: 'February, 2024',
+    },
+    {
+      name: 'Tech Agency (Grind)',
+      stack: [
+        { title: 'Next.Js', icon: <TbBrandNextjs /> },
+        { title: 'SCSS', icon: <SiSass /> },
+      ],
+      info: 'This project is a website for a dummy tech agency (Grind), which have some features like page animations, lazy loading, intersection observers, pointer movements animations, infinite scrolling,  etc. \nThis project is responsive on all devices.',
+      imgUrls: [
+        '/images/grind1.png',
+        '/images/grind2.png',
+        '/images/grind4.png',
+        '/images/grind5.png',
+        '/images/grind6.png',
+        '/images/grind7.png',
+      ],
+      id: 'b45d',
+      url: 'https://grindagency.netlify.app',
+      date: 'March, 2024',
+    },
+    {
       name: 'MTN NG Home Page Clone',
       stack: [
         { title: 'React', icon: <FaReact /> },
@@ -90,37 +122,6 @@ export const AppContextProvider = ({ children }) => {
       url: 'https://fojo-comfy-house.netlify.app/',
       date: 'December, 2020',
     },
-    // {
-    //   name: 'Cocktails',
-    //   stack: [{ title: 'ReactJs', icon: <FaReact /> }],
-    //   info: `In this project, informations of cocktails were gotten from an api, and displayed.\nUsers can search for cocktails based on their names. The site also has night mode.`,
-    //   imgUrls: ['/images/cocktales 1.png', '/images/cocktales 2.png'],
-    //   id: '2',
-    //   url: 'https://cocktales.netlify.app/',
-    //   date: 'January, 2022',
-    // },
-    // {
-    //   name: 'Portfolio',
-    //   stack: [{ title: 'ReactJs', icon: <FaReact /> }],
-    //   info: 'This project is a dummy portfolio site. It has full responsiveness, and was built with ReactJs',
-    //   imgUrls: ['/images/jd 1.png', '/images/jd 2.png'],
-    //   id: '3',
-    //   url: 'https://dummy-jd.netlify.app/',
-    //   date: 'February, 2023',
-    // },
-    // {
-    //   name: 'Game of Luck',
-    //   stack: [
-    //     { title: 'HTML', icon: <AiFillHtml5 /> },
-    //     { title: 'CSS', icon: <SiCss3 /> },
-    //     { title: 'Js', icon: <SiJavascript /> },
-    //   ],
-    //   info: `This project is a simple game, where the user selects a shape, and has to guess which concealed box has that shape.\nIt has 2 difficulty options, music and sfx, and records of games (stored using localStorage)`,
-    //   imgUrls: ['/images/gol 1.png', '/images/gol 2.png'],
-    //   id: '4',
-    //   url: 'https://game-of-luck.netlify.app/',
-    //   date: 'Novermber 2022',
-    // },
   ];
 
   const [projectId, setProjectId] = useState(1);
