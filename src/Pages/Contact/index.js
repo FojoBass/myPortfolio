@@ -50,7 +50,7 @@ const Contact = () => {
       setIsloading(false);
       setShowCaptcha(false);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       alert('Mail not sent, try again.');
       setIsloading(false);
       setShowCaptcha(false);

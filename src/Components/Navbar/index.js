@@ -77,6 +77,16 @@ const Navbar = () => {
           <li>
             <AnchorLink
               offset={() => navHeight}
+              className={`nav-link ${sectId === 'experience' ? 'active' : ''}`}
+              href='#experience'
+              data-id='experience'
+            >
+              experience
+            </AnchorLink>
+          </li>
+          <li>
+            <AnchorLink
+              offset={() => navHeight}
               className={`nav-link ${sectId === 'portfolio' ? 'active' : ''}`}
               href='#portfolio'
               data-id='portfolio'

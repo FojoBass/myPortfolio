@@ -21,6 +21,7 @@ const App = () => {
   // const servSectRef = useRef();
   const portSectRef = useRef();
   const conSectRef = useRef();
+  const expSectRef = useRef();
 
   useEffect(() => {
     localStorage.setItem('fojo-theme', JSON.stringify(lightTheme));
@@ -48,26 +49,31 @@ const App = () => {
     }
 
     if (sectionRef && !error) {
-      if (window.pageYOffset < homeSectRef.current.bottom - navHeight - 120)
+      if (window.scrollY < homeSectRef.current.bottom - navHeight - 120)
         setSectId(homeSectRef.current.id);
       else if (
-        window.pageYOffset >= aboutSectRef.current.top - navHeight - 120 &&
-        window.pageYOffset < aboutSectRef.current.bottom - navHeight - 120
+        window.scrollY >= aboutSectRef.current.top - navHeight - 120 &&
+        window.scrollY < aboutSectRef.current.bottom - navHeight - 120
       )
         setSectId(aboutSectRef.current.id);
       // else if (
-      //   window.pageYOffset >= servSectRef.current.top - navHeight - 120 &&
-      //   window.pageYOffset < servSectRef.current.bottom - navHeight - 120
+      //   window.scrollY >= servSectRef.current.top - navHeight - 120 &&
+      //   window.scrollY < servSectRef.current.bottom - navHeight - 120
       // )
       //   setSectId(servSectRef.current.id);
       else if (
-        window.pageYOffset >= portSectRef.current.top - navHeight - 120 &&
-        window.pageYOffset < portSectRef.current.bottom - navHeight - 120
+        window.scrollY >= expSectRef.current.top - navHeight - 120 &&
+        window.scrollY < expSectRef.current.bottom - navHeight - 120
+      )
+        setSectId(expSectRef.current.id);
+      else if (
+        window.scrollY >= portSectRef.current.top - navHeight - 120 &&
+        window.scrollY < portSectRef.current.bottom - navHeight - 120
       )
         setSectId(portSectRef.current.id);
       else if (
-        window.pageYOffset >= conSectRef.current.top - navHeight - 120 &&
-        window.pageYOffset < conSectRef.current.bottom - navHeight - 120
+        window.scrollY >= conSectRef.current.top - navHeight - 120 &&
+        window.scrollY < conSectRef.current.bottom - navHeight - 120
       )
         setSectId(conSectRef.current.id);
     }
@@ -115,6 +121,7 @@ const App = () => {
       // servSectRef.current = new Sect(getSection(sections, 'services'));
       portSectRef.current = new Sect(getSection(sections, 'portfolio'));
       conSectRef.current = new Sect(getSection(sections, 'contact'));
+      expSectRef.current = new Sect(getSection(sections, 'experience'));
     }
   }, [sectionRef, error]);
 

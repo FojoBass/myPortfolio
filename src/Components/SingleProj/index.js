@@ -10,8 +10,6 @@ const SingleProj = () => {
   const sliderRef = useRef(null);
   const [selCount, setSelCount] = useState(0);
 
-  console.log({ selCount });
-
   const handleClose = (e) => {
     if (e) {
       if (e === singleProjRef.current) {
