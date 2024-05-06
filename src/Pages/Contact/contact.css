@@ -120,6 +120,7 @@ textarea {
   margin-right: 10px;
   font-size: var(--xsml-fnt);
   color: var(--txt-clr1);
+  transition: all ease var(--mid-trans);
 }
 
 .con-info {
