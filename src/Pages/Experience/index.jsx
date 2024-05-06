@@ -35,7 +35,7 @@ const Experience = () => {
 
                 <ul className='exp-duties'>
                   {duties.map((duty) => (
-                    <li className='exp-duty'>
+                    <li className='exp-duty' key={duty}>
                       <span className='exp-duty-icon'>
                         <FaRegHandPointRight />
                       </span>

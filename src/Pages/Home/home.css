@@ -37,7 +37,7 @@
 
 .home-wrapper h3 {
   color: #dee3e4;
-  font-size: var(--mlrg-fnt);
+  font-size: var(--mid-fnt);
   animation: opacityAnim 2s ease-out forwards;
 }
 

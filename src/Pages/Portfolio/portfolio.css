@@ -1,4 +1,4 @@
-/* *.ntd means 'not touch device', .td means 'touch device' */
+/* ! If any section is added before portfolio, do review .project background color for both light and dark */
 
 #portfolio {
   position: relative;
@@ -11,21 +11,58 @@
 .projects {
   margin: 20px 0;
   flex-basis: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 35px 20px;
 }
 
 .project {
-  box-shadow: 0 0 10px 3px var(--box_shd2);
+  box-shadow: 0 0 10px 1px var(--shd-clr);
+  padding: 15px;
+  overflow: hidden;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
-/* *NTD */
-.ntd .project {
+.dark-theme .project {
+  background-color: var(--bg-clr2);
+}
+
+.project:last-of-type {
+  margin-bottom: 0;
+}
+
+.img-container {
+  border-radius: 5px 5px 0 0;
   position: relative;
-  margin-bottom: 25px;
-  /* height: 400px; */
-  width: 100%;
-  cursor: pointer;
-  border-radius: 10px;
   overflow: hidden;
+}
+
+.img-container:hover .img-slider {
+  filter: blur(3px);
+  transform: scale(1.2);
+}
+
+.img-container:hover .proj-name {
+  opacity: 1;
+}
+
+.img-slider {
+  display: flex;
+  transition: all ease-out var(--mid-trans);
+  position: relative;
+  height: 100%;
+}
+
+.dark-theme .img-slider::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000052;
 }
 
 .proj-name {
@@ -50,81 +87,64 @@
   text-align: center;
 }
 
-.ntd .project:hover .proj-name {
-  opacity: 1;
-  color: #fff;
-}
-
-.ntd .project .img-wrapper {
-  width: 100%;
-}
-
-.ntd .project:hover img {
-  filter: blur(3px);
-}
-
-/* *END NTD */
-
-/* *TD */
-.td .project {
-  box-shadow: 0 0 8px 3px var(--shd-clr);
-  padding: 10px;
-  margin-bottom: 40px;
-  overflow: hidden;
-  border-radius: 5px;
-  max-height: fit-content;
-}
-
-.td .project:last-of-type {
-  margin-bottom: 0;
-}
-
-.td .img-container {
-  border-radius: 5px 5px 0 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.td .img-slider {
-  display: flex;
-  transition: all ease-out var(--mid-trans);
-  position: relative;
-}
-
-.dark-theme.td .img-slider::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #00000052;
-}
-
-.td .img-slider.active {
-  filter: blur(3px);
-  transform: scale(1.2);
-}
-
-.td .proj-name.active {
-  opacity: 1;
-}
-
-.td .img-container img {
+.img-container img {
   transition: all ease var(--slow-trans);
   transform-origin: center;
 }
 
-.td .img-container.active img {
+.img-container.active img {
   filter: blur(3px);
   transform: scale(1.2);
 }
 
-.td .selectors {
+.selectors {
   padding: 5px;
+  text-align: center;
 }
 
-.td .proj-info {
+.selector {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  padding-inline: 5px;
+  box-sizing: content-box;
+}
+
+.selector:before {
+  content: '';
+  border-radius: 50%;
+  width: 8px;
+  height: 100%;
+  position: absolute;
+  border: 1px solid transparent;
+  padding-inline: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.selector:after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: var(--hdg-clr2);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all ease var(--mid-trans);
+}
+
+.selector.active::before {
+  border-color: var(--ext-clr2);
+}
+
+.selector.active:after {
+  background-color: var(--ext-clr2);
+}
+
+.proj-info {
   line-height: 20px;
   margin: 5px 0 10px;
   letter-spacing: 0.1rem;
@@ -134,9 +154,9 @@
   transition: all ease-in var(--mid-trans);
 }
 
-.td .proj-info.show {
-  height: 100px;
-  overflow-y: scroll;
+.proj-info p {
+  font-size: 0.8rem;
+  line-height: 1.5;
 }
 
 .proj-details {
@@ -148,14 +168,12 @@
 
 .stack {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .stack div {
   display: flex;
   flex-direction: column;
-  /* margin-right: 10px; */
   align-items: center;
 }
 
@@ -178,108 +196,48 @@
 .date {
   font-style: italic;
   color: var(--txt-clr1);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
-.td .more-btns {
+.more-btns {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 5px;
 }
 
-.td .more-btn,
-.view-btn {
+.more-btn,
+.port-view-btn {
   text-transform: uppercase;
   color: var(--txt-clr2);
   padding: 3px 10px;
   font-family: var(--fnt1);
   border-radius: 5px;
   letter-spacing: 0.1rem;
-  font-size: var(--xsml-fnt);
+  font-size: 0.9rem;
   display: flex;
 }
 
-.td .more-btn {
+.more-btn {
   background-color: var(--ext-clr2);
 
   align-items: flex-end;
 }
 
-.td .more-btn span,
-.td .view-btn span {
+.more-btn span,
+.port-view-btn span {
   margin-right: 3px;
 }
 
-.view-btn {
+.port-view-btn {
   background-color: var(--spc-clr);
   align-items: flex-start;
 }
 
 /* *END TD */
 
-@media screen and (min-width: 700px) {
-  .td .projects {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 20px;
-    grid-row-gap: 40px;
-    align-items: baseline;
-  }
-
-  .td .proj-info {
-    font-size: 0.9rem;
-  }
-
-  .td .project {
-    margin-bottom: 0px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .td .projects {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .td .proj-info {
-    font-size: 0.7rem;
-  }
-
-  .td .icon {
-    font-size: var(--xsml-fnt);
-  }
-
-  .td .date {
-    font-size: 0.8rem;
-  }
-
-  .td .more-btn {
-    color: var(--txt-clr2);
-    padding: 3px 10px;
-    letter-spacing: 0;
-    font-size: 0.8rem;
-  }
-
-  .td .view-btn {
-    background-color: var(--spc-clr);
-    padding: 3px 10px;
-    border-radius: 5px;
-    font-size: var(--xsml-fnt);
-    text-transform: lowercase;
-    letter-spacing: 0.1rem;
-    color: var(--txt-clr2);
-    font-family: var(--fnt2);
-  }
-}
-
-@media screen and (min-width: 1000px) {
+@media screen and (max-width: 600px) {
   .projects {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 30px;
-    grid-row-gap: 35px;
-  }
-
-  .ntd .project {
-    margin-bottom: 0;
+    grid-template-columns: 1fr;
   }
 }

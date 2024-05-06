@@ -130,7 +130,9 @@ const Contact = () => {
                   <span className='con-icon'>
                     <FiPhone />
                   </span>
-                  <span className='con-info'>+234 810 2638 349</span>
+                  <a className='con-info' href='tel:+2348102638349'>
+                    +234 810 2638 349
+                  </a>
                 </div>
 
                 <div className='con-opt'>
@@ -146,7 +148,9 @@ const Contact = () => {
                   <span className='con-icon'>
                     <CiMail />
                   </span>
-                  <span className='con-info'>fosimuboolubo@gmail.com</span>
+                  <a className='con-info' href='mailto:fosimuboolubo@gmail.com'>
+                    fosimuboolubo@gmail.com
+                  </a>
                 </div>
               </div>
 

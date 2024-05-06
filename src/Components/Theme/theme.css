@@ -20,7 +20,7 @@
   background-color: grey;
   padding: 10px;
   color: var(--txt-clr2);
-  font-size: var(--xsml-fnt);
+  font-size: 0.8rem;
   border-radius: 10px 0 0 10px;
   cursor: pointer;
 }
@@ -37,7 +37,7 @@
   text-align: center;
   font-family: var(--fnt3);
   padding: 10px;
-  font-size: var(--sml-fnt);
+  font-size: 0.9rem;
 }
 
 .sett-opt.active {
@@ -64,9 +64,31 @@
   letter-spacing: 0.1rem;
   transition: all ease var(--mid-trans);
   cursor: pointer;
+  font-size: 0.8rem;
 }
 
 .sett-opt:hover {
   background-color: #a8a8a8;
   color: #fff;
+}
+
+@media screen and (max-width: 1200px) {
+  .sett-logo {
+    left: -33px;
+    transform: translateY(-47%);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .sett-logo {
+    left: -31px;
+    transform: translateY(-50%);
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .sett-logo {
+    left: -30px;
+    transform: translateY(-50%);
+  }
 }

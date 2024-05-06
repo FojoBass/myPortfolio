@@ -6,6 +6,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   gap: 30px;
+  margin-block: 20px;
 }
 
 .exp-wrapper {
@@ -80,4 +81,10 @@
 .exp-duty-icon {
   position: relative;
   top: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .exps-wrapper {
+    grid-template-columns: 1fr;
+  }
 }

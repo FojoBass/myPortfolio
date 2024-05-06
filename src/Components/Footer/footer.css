@@ -6,10 +6,10 @@
 
 #footer p {
   font-family: var(--fnt1);
-  font-size: var(--xsml-fnt);
+  font-size: 0.8rem;
   letter-spacing: 0.1rem;
   word-spacing: 0.2rem;
-  line-height: 25px;
+  line-height: 1.5;
   color: #fff;
 }
 

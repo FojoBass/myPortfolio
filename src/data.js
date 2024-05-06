@@ -44,7 +44,7 @@ export const projects = [
     imgUrls: ['/images/book1.png', '/images/book2.png', '/images/book3.png'],
     id: 'a1g',
     url: 'https://johnbook.netlify.app',
-    data: 'February, 2024',
+    date: 'February, 2024',
   },
   {
     name: 'Tech Agency (Grind)',

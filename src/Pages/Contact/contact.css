@@ -15,7 +15,7 @@
 #contact .hdg {
   text-align: center;
   font-family: var(--fnt1);
-  font-size: var(--smd-fnt);
+  font-size: var(--sml-fnt);
   color: var(--hdg-clr2);
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -34,7 +34,6 @@
   transition: all ease var(--mid-trans);
   color: var(--txt-clr1);
   background-color: var(--bg-clr1);
-  letter-spacing: 0.1rem;
 }
 
 #contact input:focus-within,
@@ -52,7 +51,6 @@ textarea {
   transition: all ease var(--mid-trans);
   padding: 10px 20px;
   line-height: 25px;
-  letter-spacing: 0.1rem;
   background-color: var(--bg-clr1);
   color: var(--txt-clr1);
   font-family: var(--fnt3);
@@ -68,7 +66,7 @@ textarea {
   color: var(--txt-clr2);
   padding: 10px 30px;
   text-transform: capitalize;
-  font-size: var(--sml-fnt);
+  font-size: var(--xsml-fnt);
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -107,26 +105,28 @@ textarea {
 }
 
 .con-opt {
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.con-opt:hover .con-icon,
+.con-opt:hover .con-info {
+  color: var(--spc-clr);
+}
+
 .con-icon {
   margin-right: 10px;
-  font-size: var(--sml-fnt);
-  color: var(--spc-clr);
+  font-size: var(--xsml-fnt);
+  color: var(--txt-clr1);
 }
 
 .con-info {
   font-size: var(--sml-fnt);
   font-family: var(--fnt3);
+  text-decoration: underline;
   color: var(--txt-clr1);
-}
-
-.con-opt a {
-  color: var(--spc-clr);
 }
 
 .flinks-wrapper {
@@ -181,16 +181,16 @@ textarea {
   }
 
   .con-icon {
-    font-size: var(--xsml);
+    font-size: 0.9rem;
   }
 
   .con-info {
-    font-size: var(--xsml);
+    font-size: 0.9rem;
   }
 
   #contact input,
   textarea {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .flinks-wrapper {
@@ -202,7 +202,8 @@ textarea {
   }
 
   #contact .hdg {
-    font-size: var(--sml-fnt);
+    font-size: var(--xsml-fnt);
+    text-align: left;
   }
 }
 

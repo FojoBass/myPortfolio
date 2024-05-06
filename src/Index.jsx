@@ -1,11 +1,10 @@
 import React from 'react';
 import { About, Home, Contact, Portfolio, Services } from './Pages';
-import { SingleProj } from './Components';
 import { useGlobalContext } from './context';
 import Experience from './Pages/Experience';
 
 const Index = () => {
-  const { isTouchDevice, setError } = useGlobalContext();
+  const { setError } = useGlobalContext();
 
   React.useEffect(() => {
     setError(false);
@@ -19,7 +18,6 @@ const Index = () => {
       <Experience />
       <Portfolio />
       <Contact />
-      {!isTouchDevice ? <SingleProj /> : ''}
     </>
   );
 };

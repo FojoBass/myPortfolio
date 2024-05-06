@@ -34,7 +34,7 @@
   --ext-clr: #e9ecef;
   --bg-clr1: #ffffff;
   --bg-clr2: #f8f9fa;
-  --shd-clr: #d1d1d1;
+  --shd-clr: #d1d1d16f;
   --box-shd: #00000066;
   --box_shd2: #8080806e;
 }
@@ -187,41 +187,6 @@ a,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-/* *For SingleProj and Portfolio(mobile view) */
-.selectors {
-  text-align: center;
-}
-
-.selector {
-  border-radius: 50%;
-  width: 16px;
-  height: 16px;
-  margin: 0 5px;
-  position: relative;
-  border: 1px solid transparent;
-}
-
-.selector:after {
-  content: '';
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  background-color: var(--hdg-clr2);
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: all ease var(--mid-trans);
-}
-
-.selector.active {
-  border-color: var(--ext-clr2);
-}
-
-.selector.active:after {
-  background-color: var(--ext-clr2);
 }
 
 @media screen and (max-width: 350px) {
