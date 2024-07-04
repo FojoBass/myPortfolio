@@ -14,7 +14,7 @@ const Home = () => {
           I am <span className='name'>Olubo</span>{' '}
           <span className='name'>Joshua</span>
         </h1>
-        <h3>a Frontend Web Developer</h3>
+        <h3>a Fullstack Developer</h3>
 
         <AnchorLink
           className='hire-btn'

@@ -2,12 +2,7 @@ import React from 'react';
 import './about.css';
 import { Link } from 'react-router-dom';
 import { useGlobalContext } from '../../context';
-import { AiFillHtml5 } from 'react-icons/ai';
-import { FaReact } from 'react-icons/fa';
-import { IoLogoCss3 } from 'react-icons/io';
-import { IoLogoFirebase, IoLogoJavascript } from 'react-icons/io5';
-import { SiTypescript, SiRedux, SiSass } from 'react-icons/si';
-import { TbBrandNextjs } from 'react-icons/tb';
+import { stacks } from '../../data';
 
 const About = () => {
   const { sectionRef } = useGlobalContext();
@@ -24,16 +19,16 @@ const About = () => {
             <div className='flex-container'>
               <div className='left-side'>
                 <h3>
-                  I am <span>Olubo Joshua,</span> a Frontend Web Developer
+                  I am <span>Olubo Joshua,</span> a Fullstack Developer
                 </h3>
 
                 <p>
-                  I am a Front-end developer knowledgeable in building websites
+                  I am a Fullstack developer knowledgeable in building websites
                   and web applications with good UI/UX. I am equipped and
                   proficient in technologies including HTML, CSS, Javascript,
-                  Typescript, React, SCSS, and Firebase and I have made use of
-                  these to build projects with high responsiveness and great
-                  UI/UX, sticking to modern conventions in frontend development
+                  Typescript, React, SCSS, Php and Firebase and I have made use
+                  of these to build projects with high responsiveness and great
+                  UI/UX, sticking to modern conventions in web development
                 </p>
 
                 <p>
@@ -57,7 +52,7 @@ const About = () => {
 
                 <div className='opts-wrapper'>
                   <span className='opt-title'>field: </span>{' '}
-                  <span className='opt'>Frontend Developer</span>
+                  <span className='opt'>Fullstack Developer</span>
                 </div>
 
                 <Link
@@ -78,50 +73,12 @@ const About = () => {
           </h2>
 
           <div className='stack_wrapper'>
-            <div className='stack_icon html'>
-              <AiFillHtml5 />
-              <span className='stack_title'>HTML5</span>
-            </div>
-
-            <div className='stack_icon css'>
-              <IoLogoCss3 />
-              <span className='stack_title'>CSS3</span>
-            </div>
-
-            <div className='stack_icon js'>
-              <IoLogoJavascript />
-              <span className='stack_title'>JavaScript</span>
-            </div>
-
-            <div className='stack_icon ts'>
-              <SiTypescript />
-              <span className='stack_title'>TypeScript</span>
-            </div>
-
-            <div className='stack_icon react'>
-              <FaReact />
-              <span className='stack_title'>React</span>
-            </div>
-
-            <div className='stack_icon redux'>
-              <SiRedux />
-              <span className='stack_title'>Redux</span>
-            </div>
-
-            <div className='stack_icon next'>
-              <TbBrandNextjs />
-              <span className='stack_title'>Next.Js</span>
-            </div>
-
-            <div className='stack_icon sass'>
-              <SiSass />
-              <span className='stack_title'>SCSS</span>
-            </div>
-
-            <div className='stack_icon firebase'>
-              <IoLogoFirebase />
-              <span className='stack_title'>Firebase</span>
-            </div>
+            {stacks.map(({ title, Icon, id }) => (
+              <div className={`stack_icon ${id}`} key={id}>
+                <Icon />
+                <span className='stack_title'>{title}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>

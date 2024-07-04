@@ -7,8 +7,8 @@ import {
   SiTypescript,
 } from 'react-icons/si';
 import { TbBrandNextjs } from 'react-icons/tb';
-import { FaReact } from 'react-icons/fa';
-import { IoLogoFirebase } from 'react-icons/io5';
+import { FaPhp, FaReact } from 'react-icons/fa';
+import { IoLogoCss3, IoLogoFirebase, IoLogoJavascript } from 'react-icons/io5';
 
 export const projects = [
   {
@@ -174,4 +174,17 @@ all devices, resulting in improved accessibility and user
 experience.`,
     ],
   },
+];
+
+export const stacks = [
+  { Icon: AiFillHtml5, title: 'HTML5', id: 'html' },
+  { Icon: IoLogoCss3, title: 'CSS3', id: 'css' },
+  { Icon: IoLogoJavascript, title: 'JavaScript', id: 'js' },
+  { Icon: SiTypescript, title: 'TypeScript', id: 'ts' },
+  { Icon: FaReact, title: 'React', id: 'react' },
+  { Icon: SiRedux, title: 'Redux', id: 'redux' },
+  { Icon: TbBrandNextjs, title: 'Next.Js', id: 'next' },
+  { Icon: SiSass, title: 'SCSS', id: 'sass' },
+  { Icon: IoLogoFirebase, title: 'Firebase', id: 'firebase' },
+  { Icon: FaPhp, title: 'PHP', id: 'php' },
 ];

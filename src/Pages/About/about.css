@@ -185,6 +185,10 @@
   color: #000;
 }
 
+.stack_icon.php {
+  color: #787cb5;
+}
+
 @media screen and (max-width: 400px) {
   #about h3 {
     font-size: var(--sml-fnt);
