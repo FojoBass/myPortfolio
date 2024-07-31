@@ -12,6 +12,25 @@ import { IoLogoCss3, IoLogoFirebase, IoLogoJavascript } from 'react-icons/io5';
 
 export const projects = [
   {
+    name: 'Tech Agency (Grind)',
+    stack: [
+      { title: 'Next.Js', icon: <TbBrandNextjs /> },
+      { title: 'SCSS', icon: <SiSass /> },
+    ],
+    info: 'This project is a website for a dummy tech agency (Grind), which have some features like page animations, lazy loading, intersection observers, pointer movements animations, infinite scrolling,  etc. \nThis project is responsive on all devices.',
+    imgUrls: [
+      '/images/grind1.png',
+      '/images/grind2.png',
+      '/images/grind4.png',
+      '/images/grind5.png',
+      '/images/grind6.png',
+      '/images/grind7.png',
+    ],
+    id: 'b45d',
+    url: 'https://grindagency.netlify.app',
+    date: 'March, 2024',
+  },
+  {
     name: 'Social Publishing Platform',
     stack: [
       { title: 'React', icon: <FaReact /> },
@@ -45,25 +64,6 @@ export const projects = [
     id: 'a1g',
     url: 'https://johnbook.netlify.app',
     date: 'February, 2024',
-  },
-  {
-    name: 'Tech Agency (Grind)',
-    stack: [
-      { title: 'Next.Js', icon: <TbBrandNextjs /> },
-      { title: 'SCSS', icon: <SiSass /> },
-    ],
-    info: 'This project is a website for a dummy tech agency (Grind), which have some features like page animations, lazy loading, intersection observers, pointer movements animations, infinite scrolling,  etc. \nThis project is responsive on all devices.',
-    imgUrls: [
-      '/images/grind1.png',
-      '/images/grind2.png',
-      '/images/grind4.png',
-      '/images/grind5.png',
-      '/images/grind6.png',
-      '/images/grind7.png',
-    ],
-    id: 'b45d',
-    url: 'https://grindagency.netlify.app',
-    date: 'March, 2024',
   },
   {
     name: 'MTN NG Home Page Clone',
