@@ -19,15 +19,15 @@ const About = () => {
             <div className='flex-container'>
               <div className='left-side'>
                 <h3>
-                  I am <span>Olubo Joshua,</span> a Fullstack Developer
+                  I am <span>Olubo Joshua,</span> a Frontend Developer
                 </h3>
 
                 <p>
-                  I am a Fullstack developer knowledgeable in building websites
+                  I am a Frontend developer knowledgeable in building websites
                   and web applications with good UI/UX. I am equipped and
                   proficient in technologies including HTML, CSS, Javascript,
-                  Typescript, React, SCSS, Php and Firebase and I have made use
-                  of these to build projects with high responsiveness and great
+                  Typescript, React, SCSS, Firebase, etc. and I have made use of
+                  these to build projects with high responsiveness and great
                   UI/UX, sticking to modern conventions in web development
                 </p>
 
@@ -52,7 +52,7 @@ const About = () => {
 
                 <div className='opts-wrapper'>
                   <span className='opt-title'>field: </span>{' '}
-                  <span className='opt'>Fullstack Developer</span>
+                  <span className='opt'>Frontend Developer</span>
                 </div>
 
                 <Link

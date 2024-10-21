@@ -189,6 +189,14 @@
   color: #787cb5;
 }
 
+.stack_icon.tailwind {
+  color: #2196f3;
+}
+
+.stack_icon.mantine {
+  color: #0000ff;
+}
+
 @media screen and (max-width: 400px) {
   #about h3 {
     font-size: var(--sml-fnt);

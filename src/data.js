@@ -8,7 +8,10 @@ import {
 } from 'react-icons/si';
 import { TbBrandNextjs } from 'react-icons/tb';
 import { FaPhp, FaReact } from 'react-icons/fa';
-import { IoLogoCss3, IoLogoFirebase, IoLogoJavascript } from 'react-icons/io5';
+import { IoLogoCss3, IoLogoJavascript } from 'react-icons/io';
+import { IoLogoFirebase } from 'react-icons/io5';
+import { RiTailwindCssFill } from 'react-icons/ri';
+import { SiMantine } from 'react-icons/si';
 
 export const projects = [
   {
@@ -185,6 +188,9 @@ export const stacks = [
   { Icon: SiRedux, title: 'Redux', id: 'redux' },
   { Icon: TbBrandNextjs, title: 'Next.Js', id: 'next' },
   { Icon: SiSass, title: 'SCSS', id: 'sass' },
+  { Icon: RiTailwindCssFill, title: 'Tailwind', id: 'tailwind' },
+  { Icon: SiMantine, title: 'Mantine UI', id: 'mantine' },
   { Icon: IoLogoFirebase, title: 'Firebase', id: 'firebase' },
-  { Icon: FaPhp, title: 'PHP', id: 'php' },
 ];
+
+// { Icon: FaPhp, title: 'PHP', id: 'php' },
